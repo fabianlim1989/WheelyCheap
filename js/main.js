@@ -47,7 +47,7 @@ var app = {
         if (!this.currentPage) {
             $(page.el).attr('class', 'page stage-center');
             $('body').append(page.el);
-            this.currentPage = page;
+            this.currentPage = page;    
             return;
         }
 
@@ -82,6 +82,7 @@ var app = {
         this.detailsURL = /^#employees\/(\d{1,})/;
         this.registerEvents();
         this.store = new MemoryStore(function() {
+            self.showAlert('Store Initialized','Info');
             self.route();
         });
     }
