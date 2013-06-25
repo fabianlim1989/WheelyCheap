@@ -81,8 +81,8 @@ var app = {
         var self = this;
         this.detailsURL = /^#employees\/(\d{1,})/;
         this.registerEvents();
-        this.store = new MemoryStore(function() {
-            self.showAlert('Store Initialized','Info');
+        this.store = new WebSqlStore(function() {
+            self.showAlert('WebSqlStore Initialized','Info');
             self.route();
         });
     }
